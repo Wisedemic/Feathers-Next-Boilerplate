@@ -23,17 +23,17 @@ This required a few changes to the feathers server, mainly in:
     2. npm i                    - To install deps
     3. npm i --only=dev         - To install dev deps
     ```
-
 3.a Start Production app
-    ```
-    npm start
-    ```
+
+```npm start```
+
 3.b Start Development app
-    ```
-    npm run dev
-    ```
+
+```npm run dev```
+
 
 4. Profit $$$
+
 
 ## @Feathersjs/cli
 Feathers has a powerful command line interface. Here are a few things it can do:
