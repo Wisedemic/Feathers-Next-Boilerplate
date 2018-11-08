@@ -6,14 +6,12 @@ This project was built in my spare time in order to learn how to develop applica
 
 I find Feathers.js to be an very useful tool for server development, so I decided to develop a Next.js app that uses Feathers.js for it's server. 
 
-This required a few changes to the feathers server, mainly in the 
-    ```
-    1. /server/next-ssr.js - This where all the Next.js SSR logic is held.
+This required a few changes to the feathers server, mainly in:
+``` 1. /server/next-ssr.js - This where all the Next.js SSR logic is held. ```
 
-    2. /server/index.js - nextApp is used here to build Next.js on every nodemon restart.
+``` 2. /server/index.js - nextApp is used here to build Next.js on every nodemon restart.```
 
-    3. /server/middleware/nextMiddleware.js - This middleware helps distinguish between Next.js SSR request and Feathers.js service requests.
-    ```
+``` 3. /server/middleware/nextMiddleware.js - This middleware helps distinguish between Next.js SSR request and Feathers.js service requests.```
 
 ## Getting Started
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
