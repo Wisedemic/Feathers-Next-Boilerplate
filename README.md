@@ -9,7 +9,9 @@ I find Feathers.js to be an very useful tool for server development, so I decide
 This required a few changes to the feathers server, mainly in the 
     ```
     1. /server/next-ssr.js - This where all the Next.js SSR logic is held.
+
     2. /server/index.js - nextApp is used here to build Next.js on every nodemon restart.
+
     3. /server/middleware/nextMiddleware.js - This middleware helps distinguish between Next.js SSR request and Feathers.js service requests.
     ```
 
