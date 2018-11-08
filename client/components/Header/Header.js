@@ -11,13 +11,9 @@ function Header() {
         <nav className="navbar" id="mainNav" role="navigation" aria-label="main navigation" onBlur={disableMenu}>
             <div className="navbar-brand">
                 <div className="navbar-item" onClick={disableMenu}>
-                    <div id="logo" style={{ lineHeight: '1rem' }}>
-                        <div className="title is-6" style={{ marginBottom: '0px' }}>
-                            Tristan Navarrete
-                            <br />
-                            <p className="subtitle is-6">Web & Blockchain Developer</p>
-                        </div>
-                    </div>
+                    <h1 className="title is-6">
+                        Feathers / Next Boilerplate
+                    </h1>
                 </div>
                 <a role="button" className={`navbar-burger${isActive}`} onClick={isMenuToggled ? disableMenu : enableMenu}>
                     <span></span>
@@ -25,7 +21,6 @@ function Header() {
                     <span></span>
                 </a>
             </div>
-
             <div className={`navbar-menu${isActive}`}>
                 <div className="navbar-start">
 
@@ -33,10 +28,15 @@ function Header() {
                 <div className="navbar-end">
                     <div className="navbar-item">
                         <div className="buttons">
-                            <button className="button is-success has-icon" onClick={disableMenu}>
-                                <span>Medium</span>
-                                <span className="icon"><i className="fab fa-medium"></i></span>
-                            </button>
+                            <button className="button is-success" onClick={disableMenu}>
+                                Link 1
+                        </button>
+                            <button className="button is-info" onClick={disableMenu}>
+                                Link 2
+                        </button>
+                            <button className="button is-dark" onClick={disableMenu}>
+                                Link 3
+                        </button>
                         </div>
                     </div>
                 </div>
