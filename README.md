@@ -9,7 +9,7 @@ I decided to utilize Feathers.js, as it provides a quick method of building stan
 *SideNote: Feathers referes to /routes as /services; Where ```router.put('/users', someRouteFn())``` is the same as ```feathers.service('/users).create()```
 
 
-This required a few modifcations to the default ```feathers g app```command, which creates an express-feathers server.
+This required a few modifcations to the default ```feathers g app```command generated application.
 
 I made the following modifications: 
 ``` 1. /server/next-ssr.js - This where all the Next.js SSR logic is held. ```
