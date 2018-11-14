@@ -1,7 +1,9 @@
 const withSass = require('@zeit/next-sass');
+const withTypescript = require('@zeit/next-typescript');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = (nextConfig = {}) => {
-    return withSass(Object.assign({}, nextConfig, {
+    return withTypescript(withSass(Object.assign({}, nextConfig, {
         webpack(config, options) {
             const { isServer } = options;
             nextConfig = Object.assign({ inlineImageLimit: 8192, assetPrefix: "" }, nextConfig);
@@ -11,6 +13,8 @@ module.exports = (nextConfig = {}) => {
                     'This plugin is not compatible with Next.js versions below 5.0.0 https://err.sh/next-plugins/upgrade'
                 )
             }
+
+            if (isServer) config.plugins.push(new ForkTsCheckerWebpackPlugin())
 
             config.module.rules.push({
                 test: /\.(jpe?g|png|svg|gif|ico)$/,
@@ -34,5 +38,5 @@ module.exports = (nextConfig = {}) => {
 
             return config
         }
-    }));
+    })));
 }
