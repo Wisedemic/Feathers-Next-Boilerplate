@@ -25,5 +25,5 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb://wisedemic:Quantumparadox19#@ds253713.mlab.com:53713/tnavwebsite"
+  "mongodb": "mongodb://<username>:<password>@<host>"
 }
